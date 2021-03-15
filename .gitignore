@@ -1,0 +1,7 @@
+*
+!.gitignore
+!readme.md
+!requirements.txt
+!setup.py
+!wiz/
+!wiz/**
