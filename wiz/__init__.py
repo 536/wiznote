@@ -53,3 +53,9 @@ class Wiz(API):
             url=self.url('{AS_URL}/as/token/temp2token'),
             params={'tempToken': tempToken}
         )
+
+    def get_avatar(self):
+        """获取用户头像"""
+        return self.session.get(
+            url=self.url('{AS_URL}/as/user/avatar/{userGuid}', userGuid=self.userGuid)
+        )

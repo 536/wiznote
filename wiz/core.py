@@ -23,6 +23,10 @@ class API(metaclass=abc.ABCMeta):
 
     def process_response(self, r, *args, **kwargs):
         r.raise_for_status()
+
+        if 'json' not in r.headers.get('Content-Type'):
+            return r
+
         r_json = r.json()
         returnCode = r_json.get('returnCode')  # NOQA
         if returnCode == 200:
