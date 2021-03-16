@@ -19,7 +19,10 @@ class API(metaclass=abc.ABCMeta):
         self.base_info = {}
 
     def url(self, url: str, **kwargs):
-        return url.format(AS_URL=self.AS_URL, **kwargs)
+        return url.format(AS_URL=self.AS_URL,
+                          kbServer=self.kbServer,
+                          kbGuid=self.kbGuid,
+                          **kwargs)
 
     def process_response(self, r, *args, **kwargs):
         r.raise_for_status()
