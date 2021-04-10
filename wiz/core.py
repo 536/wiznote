@@ -12,7 +12,10 @@ from .error import WizError
 class API(metaclass=abc.ABCMeta):
     AS_URL = 'https://as.wiz.cn'
 
-    def __init__(self):
+    def __init__(self, username: str, password: str):
+        self.username = username
+        self.password = password
+
         self.session = requests.Session()
         self.session.hooks = dict(response=self.process_response)
 

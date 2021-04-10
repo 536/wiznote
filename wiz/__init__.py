@@ -6,13 +6,20 @@ from .core import API
 
 
 class Wiz(API):
-    def login(self, userId: str, password: str):
+    def __enter__(self):
+        self.login()
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.logout()
+
+    def login(self):
         """用户登录"""
         return self.session.post(
             self.url('{AS_URL}/as/user/login'),
             json={
-                'userId': userId,
-                'password': password
+                'userId': self.username,
+                'password': self.password
             }
         )
 
