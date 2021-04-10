@@ -6,7 +6,7 @@ from setuptools import setup
 
 setup(
     name='wiz',
-    version='1.1.0',
+    version='1.1.1',
     description='Wiz Open API In Python.',
     long_description=open('README.md', 'r', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
