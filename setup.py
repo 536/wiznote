@@ -5,8 +5,8 @@
 from setuptools import setup
 
 setup(
-    name='wiz',
-    version='1.1.1',
+    name='wiznote',
+    version='1.1.2',
     description='Wiz Open API In Python.',
     long_description=open('README.md', 'r', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
@@ -19,11 +19,13 @@ setup(
         'requests',
     ],
     zip_safe=False,
+    license='MIT',
     classifiers=[
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'License :: OSI Approved :: MIT License',
     ],
     project_urls={
         'Documentation': 'https://www.wiz.cn/wapp/pages/book/bb8f0f10-48ca-11ea-b27a-ef51fb9d4bb4',
