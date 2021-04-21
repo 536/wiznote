@@ -6,7 +6,7 @@ from setuptools import setup
 
 setup(
     name='wiznote',
-    version='1.1.2',
+    version='1.1.3',
     description='Wiz Open API In Python.',
     long_description=open('README.md', 'r', encoding='utf-8').read(),
     long_description_content_type='text/markdown',

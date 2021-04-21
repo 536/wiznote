@@ -259,3 +259,24 @@ class Wiz(API):
                 'orderBy': orderBy,
             }
         )
+
+    def create_or_update_share(self, docGuid: str, password: str = '', expiredAt: str = '', friends: str = ''):
+        """创建/修改一个分享
+        :param docGuid:
+        :param password:
+        :param expiredAt: example: '2021-04-22 00:37:00'
+        :param friends:
+        :return:
+        """
+        return self.session.post(
+            self.url('{AS_URL}/share/api/shares'),
+            json={
+                'kbGuid': self.kbGuid,
+                'docGuid': docGuid,
+                'password': password,
+                'readCountLimit': 0,
+                # 'expiredAt': '2021-04-22 00:37:00',
+                'expiredAt': expiredAt,
+                'friends': friends
+            }
+        )
