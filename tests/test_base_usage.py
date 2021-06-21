@@ -5,7 +5,7 @@
 import os
 import unittest
 
-from wiz import Wiz
+from wiznote import WizNote
 
 
 class TestBaseUsage(unittest.TestCase):
@@ -19,7 +19,7 @@ class TestBaseUsage(unittest.TestCase):
         pass
 
     def test_get_userinfo(self):
-        with Wiz(username=self.username, password=self.password) as wiz:
+        with WizNote(username=self.username, password=self.password) as wiz:
             wiz.get_userinfo()
 
 

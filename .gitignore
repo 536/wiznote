@@ -3,7 +3,7 @@
 !readme.md
 !requirements.txt
 !setup.py
-!wiz/
-!wiz/**
+!wiznote/
+!wiznote/**
 !tests/
 !tests/**

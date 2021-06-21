@@ -5,7 +5,7 @@
 from .core import API
 
 
-class Wiz(API):
+class WizNote(API):
     def __enter__(self):
         self.login()
         return self
