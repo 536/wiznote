@@ -2,6 +2,7 @@
 !.gitignore
 !readme.md
 !requirements.txt
+!requirements-dev.txt
 !setup.py
 !wiznote/
 !wiznote/**
